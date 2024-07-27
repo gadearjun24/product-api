@@ -8,7 +8,7 @@ const server = express();
 // middleware
 server.use(cors());
 server.use(express.json());
-server.use("/products/" , productRouter.router);
+server.use("/api/products/" , productRouter.router);
 
 
 // connecting server
