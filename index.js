@@ -6,7 +6,9 @@ const cors = require('cors');
 
 const server = express();
 // middleware
-server.use(cors());
+server.use(cors({
+    origin : "*"
+}));
 server.use(express.json());
 server.use("/" , productRouter.router);
 
