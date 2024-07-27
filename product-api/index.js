@@ -8,12 +8,12 @@ const server = express();
 // middleware
 server.use(cors());
 server.use(express.json());
-server.use(productRouter.router);
+server.use("/products/" , productRouter.router);
 
 
 // connecting server
 
-server.listen(process.env.PORT , ()=>
+server.listen(process.env.PORT || 8080 , ()=>
 {
     console.log(`Server is running on ${process.env.PORT}`);
 });
